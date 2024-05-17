@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Automatically skip play redirects on m.example.com
-// @author       Mike
+// @author       Justauser33
 // @match        *://m.drtuber.com/*
 // @grant        none
 // @run-at       document-start
