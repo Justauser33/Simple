@@ -12,16 +12,9 @@
 (function() {
     'use strict';
 
-    // Use regex to match the pattern /play/ followed by numbers and optional query parameters
-    var playRedirectRegex = /\/play\/(\d+)(\?.*)?$/;
-
-    var currentUrl = window.location.href;
-
-    // Check if the current URL matches the play redirect pattern
-    var match = playRedirectRegex.exec(currentUrl);
-    if (match) {
-        // Redirect to the /video/ URL with the captured numbers
-        var newUrl = 'https://m.drtuber.com/video/' + match[1] + '/';
-        window.location.replace(newUrl);
+    // Check if the URL ends with ?from=video_bottom
+    if (window.location.search === '?from=video_bottom') {
+        // Stop the loading of the page
+        window.stop();
     }
 })();
